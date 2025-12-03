@@ -1,0 +1,175 @@
+{{-- resources/views/landing.blade.php --}}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>BinaFisik - Landing</title>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+</head>
+<body>
+<div class="min-h-screen bg-gradient-to-br from-green-900 via-green-800 to-green-950">
+
+    {{-- Header --}}
+    <header class="px-6 py-6">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                {{-- Icon pengganti lucide-react Target --}}
+                <div class="w-8 h-8 rounded-full bg-yellow-400 flex items-center justify-center">
+                    <span class="text-green-900 font-bold text-lg">T</span>
+                </div>
+                <span class="text-white text-xl">BinaFisik</span>
+            </div>
+            <a
+                href="#" {{-- ganti sesuai route kamu --}}
+                class="px-6 py-2 bg-yellow-400 text-green-900 rounded-lg hover:bg-yellow-300 transition-colors"
+            >
+                Masuk
+            </a>
+        </div>
+    </header>
+
+    {{-- Hero Section --}}
+    <section class="px-6 py-20">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h1 class="text-white text-5xl mb-6 leading-tight">
+                    Wujudkan Impian Menjadi Prajurit TNI
+                </h1>
+                <p class="text-green-100 text-xl mb-8">
+                    Platform pelatihan fisik digital yang membantu calon pendaftar TNI mencapai standar tes fisik dengan bimbingan trainer profesional.
+                </p>
+                <a
+                    href="{{ route('beranda') }}"
+                    class="px-8 py-4 bg-yellow-400 text-green-900 rounded-lg hover:bg-yellow-300 transition-colors inline-flex items-center gap-2"
+                >
+                    Mulai Sekarang
+                    {{-- icon cek kecil --}}
+                    <span class="w-5 h-5 rounded-full border border-green-900 flex items-center justify-center text-xs">
+                        ✓
+                    </span>
+                </a>
+            </div>
+            <div class="hidden md:block">
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center">
+                            <div class="text-yellow-400 text-4xl mb-2">500+</div>
+                            <div class="text-green-100">Siswa Aktif</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-yellow-400 text-4xl mb-2">50+</div>
+                            <div class="text-green-100">Trainer Ahli</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-yellow-400 text-4xl mb-2">85%</div>
+                            <div class="text-green-100">Tingkat Kelulusan</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-yellow-400 text-4xl mb-2">24/7</div>
+                            <div class="text-green-100">Tracking Progress</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- Features Section --}}
+    <section class="px-6 py-20 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-center text-4xl text-gray-900 mb-4">
+                Fitur Unggulan
+            </h2>
+            <p class="text-center text-gray-600 mb-12 text-lg">
+                Semua yang Anda butuhkan untuk mempersiapkan diri menghadapi seleksi TNI
+            </p>
+            <div class="grid md:grid-cols-4 gap-8">
+                {{-- 1. Program Terarah --}}
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        {{-- icon bulat sebagai pengganti Target --}}
+                        <div class="w-8 h-8 rounded-full border-2 border-green-700 flex items-center justify-center">
+                            <span class="w-3 h-3 rounded-full bg-green-700 inline-block"></span>
+                        </div>
+                    </div>
+                    <h3 class="text-gray-900 mb-2">Program Terarah</h3>
+                    <p class="text-gray-600">
+                        Latihan disesuaikan dengan standar seleksi TNI
+                    </p>
+                </div>
+
+                {{-- 2. Tracking Digital --}}
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        {{-- pengganti TrendingUp --}}
+                        <div class="w-8 h-8 flex items-end gap-1">
+                            <span class="w-1.5 h-3 bg-green-700 rounded"></span>
+                            <span class="w-1.5 h-5 bg-green-700 rounded"></span>
+                            <span class="w-1.5 h-7 bg-green-700 rounded"></span>
+                        </div>
+                    </div>
+                    <h3 class="text-gray-900 mb-2">Tracking Digital</h3>
+                    <p class="text-gray-600">
+                        Pantau progress latihan Anda setiap minggu
+                    </p>
+                </div>
+
+                {{-- 3. Bimbingan Trainer --}}
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        {{-- pengganti Users --}}
+                        <div class="flex -space-x-2">
+                            <div class="w-6 h-6 rounded-full bg-green-700 border-2 border-green-100"></div>
+                            <div class="w-6 h-6 rounded-full bg-green-500 border-2 border-green-100"></div>
+                        </div>
+                    </div>
+                    <h3 class="text-gray-900 mb-2">Bimbingan Trainer</h3>
+                    <p class="text-gray-600">
+                        Dapatkan arahan dari trainer berpengalaman
+                    </p>
+                </div>
+
+                {{-- 4. Info Terkini --}}
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        {{-- pengganti BookOpen --}}
+                        <div class="w-8 h-8 border border-green-700 rounded-sm flex items-center justify-center text-xs text-green-700">
+                            <span>📘</span>
+                        </div>
+                    </div>
+                    <h3 class="text-gray-900 mb-2">Info Terkini</h3>
+                    <p class="text-gray-600">
+                        Informasi pendaftaran dan tips lolos seleksi
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- CTA Section --}}
+    <section class="px-6 py-20 bg-gradient-to-r from-green-800 to-green-900">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-white text-4xl mb-4">
+                Siap Memulai Perjalanan Anda?
+            </h2>
+            <p class="text-green-100 text-xl mb-8">
+                Bergabunglah dengan ratusan calon prajurit yang telah mempersiapkan diri bersama kami
+            </p>
+            <a
+                href="#" {{-- atau route lain --}}
+                class="px-8 py-4 bg-yellow-400 text-green-900 rounded-lg hover:bg-yellow-300 transition-colors"
+            >
+                Daftar Sekarang - Gratis
+            </a>
+        </div>
+    </section>
+
+    {{-- Footer --}}
+    <footer class="px-6 py-8 bg-green-950">
+        <div class="max-w-7xl mx-auto text-center text-green-300">
+            <p>&copy; 2025 BinaFisik. Platform pelatihan calon prajurit TNI.</p>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
