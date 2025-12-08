@@ -106,7 +106,15 @@
             <div>
                 <label class="block text-gray-700 mb-2">
                     <span class="inline-flex items-center gap-1">
-                        <span class="text-base">📍</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="w-4 h-4">
+                            <path d="M21 10c0 6-9 12-9
+                                    12s-9-6-9-12a9 9 0 1 1
+                                    18 0Z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
                         <span>Pilih Kota</span>
                     </span>
                 </label>
@@ -124,7 +132,17 @@
             <div>
                 <label class="block text-gray-700 mb-2">
                     <span class="inline-flex items-center gap-1">
-                        <span class="text-base">🔍</span>
+                         <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="w-4 h-4">
+                            <path d="m21 21-4.34-4.34"></path>
+                            <circle cx="11" cy="11" r="8"></circle>
+                        </svg>
                         <span>Cari Tempat Latihan</span>
                     </span>
                 </label>
@@ -183,15 +201,42 @@
 
                     <div class="space-y-2 mb-4">
                         <div class="flex items-start gap-2 text-gray-600">
-                            <span class="text-sm mt-1">📍</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="w-4 h-4">
+                                <path d="M21 10c0 6-9 12-9
+                                        12s-9-6-9-12a9 9 0 1 1
+                                        18 0Z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
                             <span class="text-sm">{{ $tempat['alamat'] }}</span>
                         </div>
                         <div class="flex items-center gap-2 text-gray-600">
-                            <span class="text-sm">📞</span>
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="w-4 h-4">
+                                <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path>
+                            </svg>
                             <span class="text-sm">{{ $tempat['telp'] }}</span>
                         </div>
                         <div class="flex items-center gap-2 text-gray-600">
-                            <span class="text-sm">⏰</span>
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="w-4 h-4">
+                            <path d="M12 6v6l4 2"></path>
+                            <circle cx="12" cy="12" r="10"></circle>
+                        </svg>
                             <span class="text-sm">{{ $tempat['jamBuka'] }}</span>
                         </div>
                     </div>
@@ -216,7 +261,16 @@
                             type="button"
                             class="flex items-center gap-2 px-4 py-2 bg-green-700 text-white rounded-lg hover:bg-green-800 transition-colors text-sm"
                         >
-                            <span>📍</span>
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="w-4 h-4">
+                                <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+                            </svg>
                             <span>Lihat Rute</span>
                         </button>
                     </div>

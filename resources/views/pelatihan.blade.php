@@ -48,9 +48,18 @@
         {{-- Tips Umum --}}
         <div class="mb-8 bg-blue-50 border border-blue-200 rounded-xl p-6">
             <div class="flex gap-3">
-                <div class="w-6 h-6 rounded-full bg-blue-600 flex items-center justify-center text-white text-xs flex-shrink-0 mt-1">
-                    🎯
-                </div>
+                <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="w-7 h-7 text-blue-600">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <circle cx="12" cy="12" r="6"></circle>
+                                    <circle cx="12" cy="12" r="2"></circle>
+                                </svg>
                 <div>
                     <h3 class="text-blue-900 mb-2">Tips Penting Sebelum Memulai</h3>
                     <ul class="text-blue-800 text-sm space-y-2">
@@ -69,7 +78,20 @@
         <div class="mb-8 bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
             <div class="bg-green-600 text-white px-6 py-4 flex items-center justify-between">
                 <div class="flex items-center gap-3">
-                    <div class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-sm">🏋️</div>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="w-6 h-6">
+                        <path d="M17.596 12.768a2 2 0 1 0 2.829-2.829l-1.768-1.767a2 2 0 0 0 2.828-2.829l-2.828-2.828a2 2 0 0 0-2.829 2.828l-1.767-1.768a2 2 0 1 0-2.829 2.829z"></path>
+                        <path d="m2.5 21.5 1.4-1.4"></path>
+                        <path d="m20.1 3.9 1.4-1.4"></path>
+                        <path d="M5.343 21.485a2 2 0 1 0 2.829-2.828l1.767 1.768a2 2 0 1 0 2.829-2.829l-6.364-6.364a2 2 0 1 0-2.829 2.829l1.768 1.767a2 2 0 0 0-2.828 2.829z"></path>
+                        <path d="m9.6 14.4 4.8-4.8"></path>
+                    </svg>
                     <h3 class="text-xl">Program Pemula</h3>
                 </div>
                 <span class="bg-white/20 px-3 py-1 rounded-full text-sm">4-8 Minggu</span>
@@ -79,15 +101,51 @@
                     <h4 class="text-gray-900 mb-3">Target Program:</h4>
                     <div class="grid md:grid-cols-3 gap-4">
                         <div class="flex items-start gap-2">
-                            <span class="text-green-600 mt-0.5">✔</span>
+                            <span class="w-6 h-6 flex items-center justify-center text-green-600">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="w-5 h-5">
+                                    <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                                    <path d="m9 11 3 3L22 4"></path>
+                                </svg>
+                            </span>
                             <span class="text-gray-700 text-sm">Membangun fondasi kekuatan dasar</span>
                         </div>
                         <div class="flex items-start gap-2">
-                            <span class="text-green-600 mt-0.5">✔</span>
+                            <span class="w-6 h-6 flex items-center justify-center text-green-600">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="w-5 h-5">
+                                    <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                                    <path d="m9 11 3 3L22 4"></path>
+                                </svg>
+                            </span>
                             <span class="text-gray-700 text-sm">Meningkatkan stamina kardiovaskular</span>
                         </div>
                         <div class="flex items-start gap-2">
-                            <span class="text-green-600 mt-0.5">✔</span>
+                            <span class="w-6 h-6 flex items-center justify-center text-green-600">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="w-5 h-5">
+                                    <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                                    <path d="m9 11 3 3L22 4"></path>
+                                </svg>
+                            </span>
                             <span class="text-gray-700 text-sm">Menyesuaikan tubuh dengan rutinitas latihan</span>
                         </div>
                     </div>
@@ -116,7 +174,17 @@
 
                 <div class="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
                     <div class="flex items-start gap-2">
-                        <span class="text-yellow-600 mt-0.5">⏱</span>
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="w-5 h-5 text-orange-500">
+                            <path d="M12 6v6l4 2"></path>
+                            <circle cx="12" cy="12" r="10"></circle>
+                        </svg>
                         <p class="text-yellow-800 text-sm">
                             <strong>Durasi:</strong> Setiap sesi latihan 30-45 menit. Fokus pada penguasaan teknik daripada kecepatan atau jumlah repetisi.
                         </p>
@@ -129,7 +197,17 @@
         <div class="mb-8 bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
             <div class="bg-blue-600 text-white px-6 py-4 flex items-center justify-between">
                 <div class="flex items-center gap-3">
-                    <div class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-sm">📈</div>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="w-6 h-6">
+                                <path d="M16 7h6v6"></path>
+                                <path d="m22 7-8.5 8.5-5-5L2 17"></path>
+                            </svg>
                     <h3 class="text-xl">Program Menengah</h3>
                 </div>
                 <span class="bg-white/20 px-3 py-1 rounded-full text-sm">8-12 Minggu</span>
@@ -139,15 +217,45 @@
                     <h4 class="text-gray-900 mb-3">Target Program:</h4>
                     <div class="grid md:grid-cols-3 gap-4">
                         <div class="flex items-start gap-2">
-                            <span class="text-blue-600 mt-0.5">✔</span>
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="w-5 h-5 text-blue-600">
+                                    <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                                    <path d="m9 11 3 3L22 4"></path>
+                                </svg>
                             <span class="text-gray-700 text-sm">Meningkatkan kekuatan dan endurance</span>
                         </div>
                         <div class="flex items-start gap-2">
-                            <span class="text-blue-600 mt-0.5">✔</span>
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="w-5 h-5 text-blue-600">
+                                    <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                                    <path d="m9 11 3 3L22 4"></path>
+                                </svg>
                             <span class="text-gray-700 text-sm">Mendekati standar minimum TNI</span>
                         </div>
                         <div class="flex items-start gap-2">
-                            <span class="text-blue-600 mt-0.5">✔</span>
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="w-5 h-5 text-blue-600">
+                                    <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                                    <path d="m9 11 3 3L22 4"></path>
+                                </svg>
                             <span class="text-gray-700 text-sm">Meningkatkan kecepatan dan kelincahan</span>
                         </div>
                     </div>
@@ -176,7 +284,17 @@
 
                 <div class="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
                     <div class="flex items-start gap-2">
-                        <span class="text-yellow-600 mt-0.5">⏱</span>
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="w-5 h-5 text-orange-500">
+                            <path d="M12 6v6l4 2"></path>
+                            <circle cx="12" cy="12" r="10"></circle>
+                        </svg>
                         <p class="text-yellow-800 text-sm">
                             <strong>Durasi:</strong> Setiap sesi latihan 45-60 menit. Tingkatkan intensitas secara bertahap dan ukur progress setiap minggu.
                         </p>
@@ -189,7 +307,17 @@
         <div class="mb-8 bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
             <div class="bg-purple-600 text-white px-6 py-4 flex items-center justify-between">
                 <div class="flex items-center gap-3">
-                    <div class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-sm">🏅</div>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="w-6 h-6">
+                            <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path>
+                            <circle cx="12" cy="8" r="6"></circle>
+                        </svg>
                     <h3 class="text-xl">Program Lanjutan</h3>
                 </div>
                 <span class="bg-white/20 px-3 py-1 rounded-full text-sm">12+ Minggu</span>
@@ -199,15 +327,45 @@
                     <h4 class="text-gray-900 mb-3">Target Program:</h4>
                     <div class="grid md:grid-cols-3 gap-4">
                         <div class="flex items-start gap-2">
-                            <span class="text-purple-600 mt-0.5">✔</span>
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="w-5 h-5 text-purple-600">
+                                    <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                                    <path d="m9 11 3 3L22 4"></path>
+                                </svg>
                             <span class="text-gray-700 text-sm">Mencapai dan melampaui standar TNI</span>
                         </div>
                         <div class="flex items-start gap-2">
-                            <span class="text-purple-600 mt-0.5">✔</span>
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="w-5 h-5 text-purple-600">
+                                    <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                                    <path d="m9 11 3 3L22 4"></path>
+                                </svg>
                             <span class="text-gray-700 text-sm">Performa maksimal di semua tes</span>
                         </div>
                         <div class="flex items-start gap-2">
-                            <span class="text-purple-600 mt-0.5">✔</span>
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="w-5 h-5 text-purple-600">
+                                    <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                                    <path d="m9 11 3 3L22 4"></path>
+                                </svg>
                             <span class="text-gray-700 text-sm">Siap menghadapi seleksi fisik</span>
                         </div>
                     </div>
@@ -236,7 +394,17 @@
 
                 <div class="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
                     <div class="flex items-start gap-2">
-                        <span class="text-yellow-600 mt-0.5">⏱</span>
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="w-5 h-5 text-orange-500">
+                            <path d="M12 6v6l4 2"></path>
+                            <circle cx="12" cy="12" r="10"></circle>
+                        </svg>
                         <p class="text-yellow-800 text-sm">
                             <strong>Durasi:</strong> Setiap sesi latihan 60-90 menit. Program ini untuk atlet yang sudah memiliki dasar kuat dan siap untuk intensitas tinggi.
                         </p>

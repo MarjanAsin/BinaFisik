@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>BinaFisik - Landing</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 <div class="min-h-screen bg-gradient-to-br from-green-900 via-green-800 to-green-950">
@@ -13,10 +14,21 @@
     <header class="px-6 py-6">
         <div class="max-w-7xl mx-auto flex items-center justify-between">
             <div class="flex items-center gap-2">
-                {{-- Icon pengganti lucide-react Target --}}
                 <div class="w-8 h-8 rounded-full bg-yellow-400 flex items-center justify-center">
-                    <span class="text-green-900 font-bold text-lg">T</span>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="w-7 h-7 text-green-700">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <circle cx="12" cy="12" r="6"></circle>
+                                    <circle cx="12" cy="12" r="2"></circle>
+                                </svg>
                 </div>
+
                 <span class="text-white text-xl">BinaFisik</span>
             </div>
             <a
@@ -88,9 +100,21 @@
                 <div class="text-center">
                     <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         {{-- icon bulat sebagai pengganti Target --}}
-                        <div class="w-8 h-8 rounded-full border-2 border-green-700 flex items-center justify-center">
-                            <span class="w-3 h-3 rounded-full bg-green-700 inline-block"></span>
+                        <div class="w-10 h-10 rounded-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="w-8 h-8 text-green-700">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <circle cx="12" cy="12" r="6"></circle>
+                                <circle cx="12" cy="12" r="2"></circle>
+                            </svg>
                         </div>
+
                     </div>
                     <h3 class="text-gray-900 mb-2">Program Terarah</h3>
                     <p class="text-gray-600">
@@ -101,12 +125,20 @@
                 {{-- 2. Tracking Digital --}}
                 <div class="text-center">
                     <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        {{-- pengganti TrendingUp --}}
-                        <div class="w-8 h-8 flex items-end gap-1">
-                            <span class="w-1.5 h-3 bg-green-700 rounded"></span>
-                            <span class="w-1.5 h-5 bg-green-700 rounded"></span>
-                            <span class="w-1.5 h-7 bg-green-700 rounded"></span>
+                        <div class="w-10 h-10 rounded-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="w-8 h-8 text-green-700">
+                                <path d="M16 7h6v6"></path>
+                                <path d="m22 7-8.5 8.5-5-5L2 17"></path>
+                            </svg>
                         </div>
+
                     </div>
                     <h3 class="text-gray-900 mb-2">Tracking Digital</h3>
                     <p class="text-gray-600">
@@ -117,11 +149,22 @@
                 {{-- 3. Bimbingan Trainer --}}
                 <div class="text-center">
                     <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        {{-- pengganti Users --}}
-                        <div class="flex -space-x-2">
-                            <div class="w-6 h-6 rounded-full bg-green-700 border-2 border-green-100"></div>
-                            <div class="w-6 h-6 rounded-full bg-green-500 border-2 border-green-100"></div>
+                        <div class="w-10 h-10 rounded-ful flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="w-8 h-8 text-green-700">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                <path d="M16 3.128a4 4 0 0 1 0 7.744"></path>
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                            </svg>
                         </div>
+
                     </div>
                     <h3 class="text-gray-900 mb-2">Bimbingan Trainer</h3>
                     <p class="text-gray-600">
@@ -132,10 +175,20 @@
                 {{-- 4. Info Terkini --}}
                 <div class="text-center">
                     <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        {{-- pengganti BookOpen --}}
-                        <div class="w-8 h-8 border border-green-700 rounded-sm flex items-center justify-center text-xs text-green-700">
-                            <span>📘</span>
+                        <div class="w-10 h-10 rounded-ful flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="w-8 h-8 text-green-700">
+                                <path d="M12 7v14"></path>
+                                <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path>
+                            </svg>
                         </div>
+
                     </div>
                     <h3 class="text-gray-900 mb-2">Info Terkini</h3>
                     <p class="text-gray-600">

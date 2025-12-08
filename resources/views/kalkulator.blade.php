@@ -168,7 +168,25 @@
                             type="submit"
                             class="flex-1 bg-green-700 text-white py-4 rounded-lg hover:bg-green-800 transition-colors flex items-center justify-center gap-2"
                         >
-                            <span class="w-5 h-5 rounded border border-white flex items-center justify-center text-xs">=</span>
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="w-5 h-5 text-white-300">
+                                <rect width="16" height="20" x="4" y="2" rx="2"></rect>
+                                <line x1="8" x2="16" y1="6" y2="6"></line>
+                                <line x1="16" x2="16" y1="14" y2="18"></line>
+                                <path d="M16 10h.01"></path>
+                                <path d="M12 10h.01"></path>
+                                <path d="M8 10h.01"></path>
+                                <path d="M12 14h.01"></path>
+                                <path d="M8 14h.01"></path>
+                                <path d="M12 18h.01"></path>
+                                <path d="M8 18h.01"></path>
+                            </svg>
                             Hitung Nilai
                         </button>
                         <a
@@ -182,7 +200,16 @@
 
                 <div class="mt-8 p-6 bg-blue-50 rounded-lg border border-blue-200">
                     <div class="flex gap-3">
-                        <div class="w-6 h-6 rounded-full bg-blue-600 flex items-center justify-center text-white text-xs flex-shrink-0">i</div>
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="w-5 h-5 text-blue-600">
+                            <path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path>
+                        </svg>
                         <div>
                             <h4 class="text-blue-900 mb-2">Cara Menggunakan Kalkulator</h4>
                             <ul class="text-blue-800 text-sm space-y-1">
@@ -203,9 +230,20 @@
         <div class="lg:col-span-1">
             <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200 sticky top-6">
                 <div class="flex items-center gap-3 mb-6">
-                    <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
-                        🏅
-                    </div>
+                    <span class="text-green-600">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="w-7 h-7">
+                            <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path>
+                            <circle cx="12" cy="8" r="6"></circle>
+                        </svg>
+                    </span>
+
                     <h3 class="text-xl text-gray-900">Hasil Penilaian</h3>
                 </div>
 
@@ -280,9 +318,28 @@
                     </div>
                 @else
                     <div class="text-center py-12">
-                        <div class="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mx-auto mb-4 text-2xl">
-                            🧮
+                        <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="w-15 h-15 text-gray-300">
+                                <rect width="16" height="20" x="4" y="2" rx="2"></rect>
+                                <line x1="8" x2="16" y1="6" y2="6"></line>
+                                <line x1="16" x2="16" y1="14" y2="18"></line>
+                                <path d="M16 10h.01"></path>
+                                <path d="M12 10h.01"></path>
+                                <path d="M8 10h.01"></path>
+                                <path d="M12 14h.01"></path>
+                                <path d="M8 14h.01"></path>
+                                <path d="M12 18h.01"></path>
+                                <path d="M8 18h.01"></path>
+                            </svg>
                         </div>
+
                         <p class="text-gray-500">
                             Masukkan data hasil tes fisik Anda dan klik "Hitung Nilai" untuk melihat hasil penilaian
                         </p>

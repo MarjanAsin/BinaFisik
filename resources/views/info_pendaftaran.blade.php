@@ -78,7 +78,19 @@
     {{-- Jadwal Pendaftaran --}}
     <div class="mb-8 bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
         <div class="bg-green-700 text-white px-6 py-4 flex items-center gap-3">
-            <div class="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center text-sm">📅</div>
+             <svg xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-5 h-5">
+                <path d="M8 2v4"></path>
+                <path d="M16 2v4"></path>
+                <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                <path d="M3 10h18"></path>
+            </svg>
             <h3 class="text-xl">Jadwal Pendaftaran 2025</h3>
         </div>
         <div class="p-6">
@@ -87,7 +99,17 @@
                     <div class="border border-gray-200 rounded-lg p-4">
                         <div class="flex items-start gap-3">
                             <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 text-lg">
-                                ⏱
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="w-5 h-5 text-green-700">
+                                    <path d="M12 6v6l4 2"></path>
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                </svg>
                             </div>
                             <div>
                                 <h4 class="text-gray-900 mb-1">{{ $jadwal['gelombang'] }}</h4>
@@ -109,7 +131,20 @@
     {{-- Tahapan Seleksi --}}
     <div class="mb-8 bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
         <div class="bg-blue-700 text-white px-6 py-4 flex items-center gap-3">
-            <div class="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center text-sm">📄</div>
+            <svg xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-5 h-5">
+                <path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path>
+                <path d="M14 2v5a1 1 0 0 0 1 1h5"></path>
+                <path d="M10 9H8"></path>
+                <path d="M16 13H8"></path>
+                <path d="M16 17H8"></path>
+            </svg>
             <h3 class="text-xl">Tahapan Seleksi</h3>
         </div>
         <div class="p-6">
@@ -142,7 +177,20 @@
     {{-- Persyaratan Umum --}}
     <div class="mb-8 bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
         <div class="bg-purple-700 text-white px-6 py-4 flex items-center gap-3">
-            <div class="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center text-sm">✅</div>
+            <svg xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-5 h-5">
+                <path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path>
+                <path d="M14 2v5a1 1 0 0 0 1 1h5"></path>
+                <path d="M10 9H8"></path>
+                <path d="M16 13H8"></path>
+                <path d="M16 17H8"></path>
+            </svg>
             <h3 class="text-xl">Persyaratan Umum</h3>
         </div>
         <div class="p-6">
@@ -162,7 +210,20 @@
     {{-- Dokumen yang Diperlukan --}}
     <div class="mb-8 bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
         <div class="bg-orange-600 text-white px-6 py-4 flex items-center gap-3">
-            <div class="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center text-sm">📂</div>
+            <svg xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-5 h-5">
+                <path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path>
+                <path d="M14 2v5a1 1 0 0 0 1 1h5"></path>
+                <path d="M10 9H8"></path>
+                <path d="M16 13H8"></path>
+                <path d="M16 17H8"></path>
+            </svg>
             <h3 class="text-xl">Dokumen yang Diperlukan</h3>
         </div>
         <div class="p-6">
@@ -220,9 +281,15 @@
     {{-- Links Info Resmi --}}
     <div class="bg-gradient-to-r from-green-700 to-green-800 rounded-xl p-8 text-white">
         <div class="flex items-start gap-4">
-            <div class="w-12 h-12 rounded-full bg-green-900 flex items-center justify-center text-2xl flex-shrink-0">
-                📍
-            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round"
+                 class="w-10 h-10 text-yellow-400">
+                <path d="M21 10c0 6-9 12-9
+                         12s-9-6-9-12a9 9 0 1 1
+                         18 0Z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+            </svg>
             <div class="flex-1">
                 <h3 class="text-xl mb-3">Informasi Lebih Lanjut</h3>
                 <p class="text-green-100 mb-6">
@@ -236,7 +303,18 @@
                         class="bg-white text-green-800 px-6 py-3 rounded-lg hover:bg-green-50 transition-colors flex items-center justify-center gap-2 text-sm font-medium"
                     >
                         TNI Rekrutmen
-                        <span class="text-base">↗</span>
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="w-4 h-4">
+                            <path d="M15 3h6v6"></path>
+                            <path d="M10 14 21 3"></path>
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        </svg>
                     </a>
                     <a
                         href="https://tni.mil.id"
@@ -245,7 +323,18 @@
                         class="bg-white text-green-800 px-6 py-3 rounded-lg hover:bg-green-50 transition-colors flex items-center justify-center gap-2 text-sm font-medium"
                     >
                         TNI Official
-                        <span class="text-base">↗</span>
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="w-4 h-4">
+                            <path d="M15 3h6v6"></path>
+                            <path d="M10 14 21 3"></path>
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        </svg>
                     </a>
                     <a
                         href="https://tniad.mil.id"
@@ -254,7 +343,18 @@
                         class="bg-white text-green-800 px-6 py-3 rounded-lg hover:bg-green-50 transition-colors flex items-center justify-center gap-2 text-sm font-medium"
                     >
                         TNI AD
-                        <span class="text-base">↗</span>
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="w-4 h-4">
+                            <path d="M15 3h6v6"></path>
+                            <path d="M10 14 21 3"></path>
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        </svg>
                     </a>
                 </div>
             </div>

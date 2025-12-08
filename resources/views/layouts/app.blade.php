@@ -14,19 +14,30 @@
             <div class="flex items-center justify-between h-16">
                 {{-- Logo & Brand --}}
                 <a href="{{ route('landing') }}" class="flex items-center gap-2">
-                    <div class="w-8 h-8 rounded-full bg-yellow-400 flex items-center justify-center text-green-900 font-bold">
-                        T
-                    </div>
+                    <div class="w-8 h-8 rounded-full bg-yellow-400 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="w-7 h-7 text-green-700">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <circle cx="12" cy="12" r="6"></circle>
+                                    <circle cx="12" cy="12" r="2"></circle>
+                                </svg>
+                </div>
                     <span class="text-xl">BinaFisik</span>
                 </a>
 
                 @php
                     $menus = [
-                        ['route' => 'beranda',         'label' => 'Beranda',          'icon' => '🏠'],
-                        ['route' => 'kalkulator.show', 'label' => 'Kalkulator Nilai', 'icon' => '🧮'],
-                        ['route' => 'pelatihan',       'label' => 'Pelatihan',        'icon' => '🏋️'],
-                        ['route' => 'info_pendaftaran','label' => 'Info Pendaftaran', 'icon' => 'ℹ️'],
-                        ['route' => 'lokasi',          'label' => 'Lokasi',           'icon' => '📍'],
+                        ['route' => 'beranda',          'label' => 'Beranda',          'icon' => 'house'],
+                        ['route' => 'kalkulator.show',  'label' => 'Kalkulator Nilai', 'icon' => 'calculator'],
+                        ['route' => 'pelatihan',        'label' => 'Pelatihan',        'icon' => 'pelatihan'],
+                        ['route' => 'info_pendaftaran', 'label' => 'Info Pendaftaran', 'icon' => 'info'],
+                        ['route' => 'lokasi',           'label' => 'Lokasi',           'icon' => 'map-pin'],
                     ];
                 @endphp
 
@@ -41,7 +52,7 @@
                             class="flex items-center gap-2 px-4 py-2 rounded-lg transition-colors
                                    {{ $active ? 'bg-green-700 text-white' : 'text-green-100 hover:bg-green-700/50' }}"
                         >
-                            <span class="text-lg">{{ $menu['icon'] }}</span>
+                            <x-icon :name="$menu['icon']" />
                             <span>{{ $menu['label'] }}</span>
                         </a>
                     @endforeach
@@ -76,7 +87,7 @@
                         class="flex flex-col items-center gap-1 px-2 py-2 rounded-lg transition-colors
                                {{ $active ? 'bg-green-700 text-white' : 'text-green-100 hover:bg-green-700/50' }}"
                     >
-                        <span class="text-lg">{{ $menu['icon'] }}</span>
+                        <x-icon :name="$menu['icon']" class="w-5 h-5" />
                         <span class="text-xs text-center">{{ $menu['label'] }}</span>
                     </a>
                 @endforeach

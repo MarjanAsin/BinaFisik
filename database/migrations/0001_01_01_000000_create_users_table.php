@@ -13,10 +13,23 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
+
+            // default Laravel
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+
+            // tambahan kolom PESERTA
+            $table->date('tanggal_lahir')->nullable();
+            $table->enum('jenis_kelamin', ['L', 'P'])->nullable();
+            $table->text('alamat')->nullable();
+            $table->string('no_hp', 20)->nullable();
+            $table->enum('status', ['aktif', 'nonaktif'])->default('aktif');
+
+            // role untuk membedakan peserta vs pelatih (opsional tapi disarankan)
+            $table->enum('role', ['peserta', 'pelatih', 'admin'])->default('peserta');
+
             $table->rememberToken();
             $table->timestamps();
         });
