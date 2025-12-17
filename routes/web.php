@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KalkulatorController;
+use App\Http\Controllers\AuthController;
 
 // Landing page
 Route::get('/', function () {
@@ -34,3 +35,14 @@ Route::get('/info-pendaftaran', function () {
 Route::get('/lokasi', function () {
     return view('lokasi'); // resources/views/lokasi.blade.php
 })->name('lokasi');
+
+
+
+
+// AUTH
+Route::post('/login', [AuthController::class, 'login'])->name('login');
+Route::post('/register', [AuthController::class, 'register'])->name('register');
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+
+

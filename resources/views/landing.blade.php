@@ -1,4 +1,6 @@
 {{-- resources/views/landing.blade.php --}}
+@include('components.auth-dialog')
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -31,12 +33,15 @@
 
                 <span class="text-white text-xl">BinaFisik</span>
             </div>
-            <a
-                href="#" {{-- ganti sesuai route kamu --}}
-                class="px-6 py-2 bg-yellow-400 text-green-900 rounded-lg hover:bg-yellow-300 transition-colors"
+            <button
+                type="button"
+                onclick="openLoginDialog()"
+                class="px-6 py-2 bg-yellow-400 text-green-900 rounded-lg hover:bg-yellow-300 cursor-pointer"
             >
                 Masuk
-            </a>
+            </button>
+
+
         </div>
     </header>
 
@@ -208,12 +213,14 @@
             <p class="text-green-100 text-xl mb-8">
                 Bergabunglah dengan ratusan calon prajurit yang telah mempersiapkan diri bersama kami
             </p>
-            <a
-                href="#" {{-- atau route lain --}}
-                class="px-8 py-4 bg-yellow-400 text-green-900 rounded-lg hover:bg-yellow-300 transition-colors"
+            <button
+                type="button"
+                onclick="openRegisterDialog()"
+                class="px-8 py-4 bg-yellow-400 text-green-900 rounded-lg hover:bg-yellow-300 transition-colors cursor-pointer"
             >
-                Daftar Sekarang - Gratis
-            </a>
+                Daftar Sekarang – Gratis
+            </button>
+
         </div>
     </section>
 
@@ -223,6 +230,116 @@
             <p>&copy; 2025 BinaFisik. Platform pelatihan calon prajurit TNI.</p>
         </div>
     </footer>
+
+    <script>
+    let isLogin = true;
+
+    function openAuthDialog() {
+        const modal = document.getElementById('authDialog');
+        if (!modal) return;
+
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+    }
+
+    function closeAuthDialog() {
+        const modal = document.getElementById('authDialog');
+        if (!modal) return;
+
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+    }
+
+    function toggleAuthMode() {
+        isLogin = !isLogin;
+
+        document.getElementById('nameField')?.classList.toggle('hidden', isLogin);
+        document.getElementById('confirmPasswordField')?.classList.toggle('hidden', isLogin);
+        document.getElementById('registerInfo')?.classList.toggle('hidden', isLogin);
+
+        document.getElementById('authSubmit').innerText = isLogin ? 'Masuk' : 'Daftar';
+        document.getElementById('authSubtitle').innerText =
+            isLogin ? 'Masuk ke akun Anda' : 'Daftar akun baru';
+
+        // ⬇️ INI YANG PENTING
+        document.getElementById('authToggleText').innerText =
+            isLogin ? 'Belum punya akun?' : 'Sudah punya akun?';
+
+        document.getElementById('authToggleButton').innerText =
+            isLogin ? 'Daftar di sini' : 'Masuk di sini';
+
+        document.getElementById('authForm').action =
+            isLogin ? "{{ route('login') }}" : "{{ route('register') }}";
+    }
+
+
+    function togglePassword() {
+        const input = document.getElementById('passwordInput');
+        const eyeOpen = document.getElementById('eyeOpen');
+        const eyeClosed = document.getElementById('eyeClosed');
+
+        if (!input) return;
+
+        const isPassword = input.type === 'password';
+
+        input.type = isPassword ? 'text' : 'password';
+
+        // Toggle icon
+        eyeOpen.classList.toggle('hidden', !isPassword);
+        eyeClosed.classList.toggle('hidden', isPassword);
+    }
+
+    function toggleConfirmPassword() {
+        const input = document.getElementById('confirmPasswordInput');
+        const eyeOpen = document.getElementById('confirmEyeOpen');
+        const eyeClosed = document.getElementById('confirmEyeClosed');
+
+        if (!input) return;
+
+        const isPassword = input.type === 'password';
+        input.type = isPassword ? 'text' : 'password';
+
+        eyeOpen.classList.toggle('hidden', !isPassword);
+        eyeClosed.classList.toggle('hidden', isPassword);
+    }
+
+    function validatePasswordMatch() {
+        const password = document.getElementById('passwordInput')?.value;
+        const confirm = document.getElementById('confirmPasswordInput')?.value;
+        const error = document.getElementById('passwordError');
+
+        if (!password || !confirm) {
+            error.classList.add('hidden');
+            return;
+        }
+
+        if (password !== confirm) {
+            error.classList.remove('hidden');
+        } else {
+            error.classList.add('hidden');
+        }
+    }
+
+
+    function openLoginDialog() {
+        openAuthDialog();
+
+        // Paksa ke LOGIN
+        if (!isLogin) {
+            toggleAuthMode();
+        }
+    }
+
+    function openRegisterDialog() {
+        openAuthDialog();
+
+        // Paksa ke REGISTER
+        if (isLogin) {
+            toggleAuthMode();
+        }
+    }
+
+</script>
 </div>
 </body>
 </html>
