@@ -37,28 +37,29 @@ class AuthController extends Controller
     /**
      * Handle Register
      */
-    public function register(Request $request)
+   public function register(Request $request)
     {
-        // Validasi input
+        // dd($request->all());
         $validated = $request->validate([
-            'name'                  => ['required', 'string', 'max:255'],
-            'email'                 => ['required', 'email', 'unique:users,email'],
-            'password'              => ['required', 'min:8', 'confirmed'],
+            'name'     => ['required', 'string', 'max:255'],
+            'email'    => ['required', 'email', 'unique:users,email'],
+            'password' => ['required', 'min:3', 'confirmed'],
         ]);
 
-        // Buat user baru
         $user = User::create([
             'name'     => $validated['name'],
             'email'    => $validated['email'],
             'password' => Hash::make($validated['password']),
+            // role otomatis: peserta
         ]);
 
-        // Auto login setelah register
         Auth::login($user);
         $request->session()->regenerate();
 
         return redirect()->route('beranda');
     }
+
+
 
     /**
      * Logout

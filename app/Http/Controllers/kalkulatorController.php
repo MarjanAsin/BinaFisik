@@ -3,18 +3,33 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\HasilPenilaian;
+use Illuminate\Support\Facades\Auth;
 
 class kalkulatorController extends Controller
 {
     public function show()
     {
-        // nanti bisa ambil riwayat dari database, sementara kosong saja
-        $records = [];
+        $records = HasilPenilaian::where('user_id', auth()->id())
+            ->orderBy('tanggal_tes', 'asc')
+            ->get()
+            ->map(function ($item) {
+                $detail = json_decode($item->keterangan, true);
 
-        $scoreResult = session('scoreResult'); // hasil perhitungan terakhir
-        $success = session('success');
+                return [
+                    'tanggal'      => $item->tanggal_tes,
+                    'lari12menit'  => $detail['lari12menit'] ?? 0,
+                    'pushUp'       => $detail['pushUp']['nilai'] ?? 0,
+                    'sitUp'        => $detail['sitUp'] ?? 0,
+                    'pullUp'       => $detail['pullUp']['nilai'] ?? 0,
+                ];
+            });
 
-        return view('kalkulator', compact('records', 'scoreResult', 'success'));
+        return view('kalkulator', [
+            'records'     => $records,
+            'scoreResult' => session('scoreResult'),
+            'success'     => session('success'),
+        ]);
     }
 
     public function hitung(Request $request)
@@ -31,7 +46,7 @@ class kalkulatorController extends Controller
 
         $gender = $data['gender'];
 
-        // --- FUNGSI2 PERHITUNGAN (copy dari logika React, tapi versi PHP) ---
+        // ================== FUNGSI HITUNG ==================
 
         $hitungNilaiLari12Menit = function (float $jarak, string $gender): float {
             if ($gender === 'laki-laki') {
@@ -128,7 +143,7 @@ class kalkulatorController extends Controller
             }
         };
 
-        // --- HITUNG SEMUA NILAI ---
+        // ================== HITUNG ==================
 
         $lari12menitNilai = $hitungNilaiLari12Menit((float) $data['lari12menit'], $gender);
         $pushUpResult     = $hitungNilaiPushUp((int) $data['pushUp'], $gender);
@@ -155,7 +170,20 @@ class kalkulatorController extends Controller
             'kategoriPullUp' => $pullUpResult['kategori'] ?? null,
         ];
 
-        // TODO: kalau mau simpan ke database, tinggal insert di sini
+        // ================== SIMPAN KE DATABASE ==================
+        HasilPenilaian::create([
+            'user_id'     => Auth::id(),
+            'tanggal_tes' => $data['tanggal'],
+            'nilai'       => $nilaiAkhir,
+            'hasil'       => $status === 'lulus' ? 'LULUS' : 'TIDAK LULUS',
+            'keterangan'  => json_encode([
+                'lari12menit' => $lari12menitNilai,
+                'pushUp'      => $pushUpResult,
+                'sitUp'       => $sitUpNilai,
+                'pullUp'      => $pullUpResult,
+                'shuttleRun'  => $shuttleRunNilai,
+            ]),
+        ]);
 
         return redirect()
             ->route('kalkulator.show')
@@ -163,6 +191,6 @@ class kalkulatorController extends Controller
                 'scoreResult' => $scoreResult,
                 'success'     => 'Data berhasil dihitung dan disimpan! 🎉',
             ])
-            ->withInput(); // supaya value form tetap terisi
+            ->withInput();
     }
 }

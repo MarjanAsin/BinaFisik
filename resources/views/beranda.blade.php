@@ -327,7 +327,7 @@
                         Coba Kalkulator Nilai
                     </a>
                     <a
-                        href="{{ route('pelatihan') }}"
+                        href="{{ route('lokasi') }}"
                         class="px-6 py-3 bg-white/20 backdrop-blur-sm text-white border border-white/30 rounded-lg hover:bg-white/30 transition-colors text-sm font-medium"
                     >
                         Hubungi Trainer

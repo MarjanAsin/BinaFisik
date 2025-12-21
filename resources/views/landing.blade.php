@@ -55,16 +55,18 @@
                 <p class="text-green-100 text-xl mb-8">
                     Platform pelatihan fisik digital yang membantu calon pendaftar TNI mencapai standar tes fisik dengan bimbingan trainer profesional.
                 </p>
-                <a
-                    href="{{ route('beranda') }}"
+                <button
+                    type="button"
+                    onclick="openLoginDialog()"
                     class="px-8 py-4 bg-yellow-400 text-green-900 rounded-lg hover:bg-yellow-300 transition-colors inline-flex items-center gap-2"
                 >
                     Mulai Sekarang
-                    {{-- icon cek kecil --}}
-                    <span class="w-5 h-5 rounded-full border border-green-900 flex items-center justify-center text-xs">
+                    <span class="w-5 h-5 rounded-full border border-green-900 flex items-center justify-center text-xs font-extrabold">
                         ✓
                     </span>
-                </a>
+
+
+                </button>
             </div>
             <div class="hidden md:block">
                 <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">

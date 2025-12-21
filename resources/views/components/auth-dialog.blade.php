@@ -216,10 +216,12 @@
 
                 <button
                     id="authSubmit"
+                    type="submit"
                     class="w-full bg-green-700 text-white py-3 rounded-lg hover:bg-green-800 cursor-pointer"
                 >
                     Masuk
                 </button>
+
             </form>
 
             {{-- Toggle --}}

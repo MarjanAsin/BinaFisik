@@ -3,23 +3,26 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KalkulatorController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DashboardController;
 
 // Landing page
 Route::get('/', function () {
     return view('landing');   // resources/views/landing.blade.php
 })->name('landing');
 
-// Beranda / Dashboard
-Route::get('/beranda', function () {
-    return view('beranda'); // resources/views/beranda.blade.php
-})->name('beranda');
 
-// Kalkulator Nilai Jasmani
-Route::get('/kalkulator', [KalkulatorController::class, 'show'])
-    ->name('kalkulator.show');
 
-Route::post('/kalkulator/hitung', [KalkulatorController::class, 'hitung'])
-    ->name('kalkulator.hitung');
+Route::get('/beranda', [DashboardController::class, 'index'])
+    ->middleware('auth')
+    ->name('beranda');
+
+
+
+Route::middleware('auth')->group(function () {
+    Route::get('/kalkulator', [KalkulatorController::class, 'show'])->name('kalkulator.show');
+    Route::post('/kalkulator/hitung', [KalkulatorController::class, 'hitung'])->name('kalkulator.hitung');
+});
+
 
 // Halaman Program Pelatihan
 Route::get('/pelatihan', function () {
