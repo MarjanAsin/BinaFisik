@@ -255,25 +255,29 @@
     function toggleAuthMode() {
         isLogin = !isLogin;
 
+        // Toggle field tambahan
         document.getElementById('nameField')?.classList.toggle('hidden', isLogin);
         document.getElementById('confirmPasswordField')?.classList.toggle('hidden', isLogin);
         document.getElementById('registerInfo')?.classList.toggle('hidden', isLogin);
 
+        // Judul & subtitle
         document.getElementById('authSubmit').innerText = isLogin ? 'Masuk' : 'Daftar';
         document.getElementById('authSubtitle').innerText =
             isLogin ? 'Masuk ke akun Anda' : 'Daftar akun baru';
 
-        // ⬇️ INI YANG PENTING
+        // Toggle text bawah
         document.getElementById('authToggleText').innerText =
             isLogin ? 'Belum punya akun?' : 'Sudah punya akun?';
 
         document.getElementById('authToggleButton').innerText =
             isLogin ? 'Daftar di sini' : 'Masuk di sini';
 
+        // 🔥 FIX PENTING: action form
         document.getElementById('authForm').action =
-            isLogin ? "{{ route('login') }}" : "{{ route('register') }}";
+            isLogin
+                ? "{{ route('login.post') }}"
+                : "{{ route('register') }}";
     }
-
 
     function togglePassword() {
         const input = document.getElementById('passwordInput');
@@ -283,12 +287,10 @@
         if (!input) return;
 
         const isPassword = input.type === 'password';
-
         input.type = isPassword ? 'text' : 'password';
 
-        // Toggle icon
-        eyeOpen.classList.toggle('hidden', !isPassword);
-        eyeClosed.classList.toggle('hidden', isPassword);
+        eyeOpen?.classList.toggle('hidden', !isPassword);
+        eyeClosed?.classList.toggle('hidden', isPassword);
     }
 
     function toggleConfirmPassword() {
@@ -301,27 +303,26 @@
         const isPassword = input.type === 'password';
         input.type = isPassword ? 'text' : 'password';
 
-        eyeOpen.classList.toggle('hidden', !isPassword);
-        eyeClosed.classList.toggle('hidden', isPassword);
+        eyeOpen?.classList.toggle('hidden', !isPassword);
+        eyeClosed?.classList.toggle('hidden', isPassword);
     }
 
     function validatePasswordMatch() {
         const password = document.getElementById('passwordInput')?.value;
-        const confirm = document.getElementById('confirmPasswordInput')?.value;
-        const error = document.getElementById('passwordError');
+        const confirm  = document.getElementById('confirmPasswordInput')?.value;
+        const error    = document.getElementById('passwordError');
 
         if (!password || !confirm) {
-            error.classList.add('hidden');
+            error?.classList.add('hidden');
             return;
         }
 
         if (password !== confirm) {
-            error.classList.remove('hidden');
+            error?.classList.remove('hidden');
         } else {
-            error.classList.add('hidden');
+            error?.classList.add('hidden');
         }
     }
-
 
     function openLoginDialog() {
         openAuthDialog();
@@ -341,7 +342,14 @@
         }
     }
 
+    // 🔥 AUTO OPEN DARI MIDDLEWARE AUTH
+    @if(session('showLogin'))
+    document.addEventListener('DOMContentLoaded', function () {
+        openLoginDialog();
+    });
+    @endif
 </script>
+
 </div>
 </body>
 </html>

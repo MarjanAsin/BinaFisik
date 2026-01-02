@@ -28,7 +28,7 @@
             <form
                 id="authForm"
                 method="POST"
-                action="{{ route('login') }}"
+                action="{{ route('login.post') }}"
                 class="space-y-4"
             >
                 @csrf
