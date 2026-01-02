@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\KalkulatorController;
+use App\Http\Controllers\kalkulatorController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 
@@ -42,10 +42,10 @@ Route::get('/beranda', [DashboardController::class, 'index'])
 |--------------------------------------------------------------------------
 */
 Route::middleware('auth')->group(function () {
-    Route::get('/kalkulator', [KalkulatorController::class, 'show'])
+    Route::get('/kalkulator', [kalkulatorController::class, 'show'])
         ->name('kalkulator.show');
 
-    Route::post('/kalkulator/hitung', [KalkulatorController::class, 'hitung'])
+    Route::post('/kalkulator/hitung', [kalkulatorController::class, 'hitung'])
         ->name('kalkulator.hitung');
 });
 
