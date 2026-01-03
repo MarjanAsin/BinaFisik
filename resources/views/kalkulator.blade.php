@@ -73,9 +73,9 @@
                                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                                 required
                             />
-                            <p class="text-sm text-gray-500 mt-1">
+                            {{-- <p class="text-sm text-gray-500 mt-1">
                                 {{ $gender === 'laki-laki' ? 'Standar: 3.444 meter' : 'Standar: 3.095 meter' }}
-                            </p>
+                            </p> --}}
                             @error('lari12menit')
                                 <p class="text-sm text-red-500 mt-1">{{ $message }}</p>
                             @enderror
@@ -92,13 +92,13 @@
                                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                                 required
                             />
-                            <p class="text-sm text-gray-500 mt-1">
+                            {{-- <p class="text-sm text-gray-500 mt-1">
                                 @if($gender === 'laki-laki')
                                     ≥50 = Sangat Baik, 40-49 = Baik, &lt;30 = Rendah
                                 @else
                                     ≥30 = Sangat Baik, 20-25 = Baik, &lt;10 = Rendah
                                 @endif
-                            </p>
+                            </p> --}}
                             @error('pushUp')
                                 <p class="text-sm text-red-500 mt-1">{{ $message }}</p>
                             @enderror
@@ -115,9 +115,9 @@
                                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                                 required
                             />
-                            <p class="text-sm text-gray-500 mt-1">
+                            {{-- <p class="text-sm text-gray-500 mt-1">
                                 {{ $gender === 'laki-laki' ? 'Standar: 45 repetisi' : 'Standar: 43 repetisi' }}
-                            </p>
+                            </p> --}}
                             @error('sitUp')
                                 <p class="text-sm text-red-500 mt-1">{{ $message }}</p>
                             @enderror
@@ -134,9 +134,9 @@
                                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                                 required
                             />
-                            <p class="text-sm text-gray-500 mt-1">
+                            {{-- <p class="text-sm text-gray-500 mt-1">
                                 {{ $gender === 'laki-laki' ? 'Standar: ≥18 = Sangat Baik' : 'Standar: 63 repetisi' }}
-                            </p>
+                            </p> --}}
                             @error('pullUp')
                                 <p class="text-sm text-red-500 mt-1">{{ $message }}</p>
                             @enderror
@@ -154,9 +154,9 @@
                                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                                 required
                             />
-                            <p class="text-sm text-gray-500 mt-1">
+                            {{-- <p class="text-sm text-gray-500 mt-1">
                                 {{ $gender === 'laki-laki' ? 'Standar: 16,2 detik' : 'Standar: 17,6 detik' }}
-                            </p>
+                            </p> --}}
                             @error('shuttleRun')
                                 <p class="text-sm text-red-500 mt-1">{{ $message }}</p>
                             @enderror
